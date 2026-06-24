@@ -1,0 +1,1 @@
+ALTER TABLE "campaigns" ADD COLUMN "brief_data" jsonb;

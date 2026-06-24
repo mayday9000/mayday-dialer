@@ -1,0 +1,1 @@
+ALTER TABLE "leads" ADD COLUMN "key_notes" jsonb DEFAULT '[]'::jsonb;
