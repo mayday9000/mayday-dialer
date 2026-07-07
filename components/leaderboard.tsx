@@ -59,6 +59,26 @@ export function Leaderboard({
               <div className="text-right">Booked</div>
               <div className="text-right">Talk</div>
             </div>
+            {rows.length > 1 && (
+              <div className="grid grid-cols-[1.75rem_1fr_2.75rem_2.75rem_2.75rem_3.25rem] items-center gap-2 rounded-md border border-primary/20 bg-primary/5 px-2 py-2 text-sm font-semibold">
+                <div className="flex justify-center">
+                  <Trophy className="size-4 text-primary" />
+                </div>
+                <div className="min-w-0 truncate">Mayday AI</div>
+                <div className="text-right tabular-nums">
+                  {rows.reduce((n, r) => n + r.dials, 0)}
+                </div>
+                <div className="text-right tabular-nums">
+                  {rows.reduce((n, r) => n + r.conversations, 0)}
+                </div>
+                <div className="text-right tabular-nums">
+                  {rows.reduce((n, r) => n + r.booked, 0)}
+                </div>
+                <div className="text-right tabular-nums text-muted-foreground">
+                  {fmtDuration(rows.reduce((n, r) => n + r.talkSec, 0))}
+                </div>
+              </div>
+            )}
             {rows.map((r, i) => {
               const me = r.userId === currentUserId;
               return (
