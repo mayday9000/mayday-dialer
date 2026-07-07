@@ -26,6 +26,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { NewCampaignButton } from "@/components/new-campaign-button";
+import { QuickDial } from "@/components/quick-dial";
 import { Wordmark } from "@/components/wordmark";
 
 type Campaign = { id: string; name: string };
@@ -162,6 +163,7 @@ function NavBody({
           badge={unheardVoicemails}
           onNavigate={onNavigate}
         />
+        <QuickDial onNavigate={onNavigate} />
         {user.role === "admin" && (
           <TopLink
             href="/admin/lead-sources"
