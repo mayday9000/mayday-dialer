@@ -1,12 +1,8 @@
-# Acme Dialer — Cold-Call CRM + Browser Dialer
+# Mayday AI Dialer — Cold-Call CRM + Browser Dialer
 
 Private, invite-only web app for cold-calling sales leads. The whole point is a
 fast calling loop: load a lead → research → call → pitch from a script → take
 notes → book a meeting → next lead.
-
-> **Note:** "Acme" is a placeholder brand name — rename it to whatever you like
-> (search the repo for `Acme`). The app is fully functional in a local "stub"
-> mode with no external accounts; wire up the optional integrations as you go.
 
 ## Stack
 
